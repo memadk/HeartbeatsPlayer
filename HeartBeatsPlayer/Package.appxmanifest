@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="mema.dk.HeartBeatsRadio" Publisher="CN=26014111-6368-4577-998C-DA47A7035807" Version="1.1.0.8" />
+  <Properties>
+    <DisplayName>HeartBeats Radio</DisplayName>
+    <PublisherDisplayName>mema.dk v/Mikkel Andreasen</PublisherDisplayName>
+    <Logo>Assets\Logo50.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="HeartBeatsPlayer.App">
+      <m2:VisualElements DisplayName="HeartBeats Radio" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\logo30.png" Description="HeartBeats Radio is an app for playing Le Gammeltofts HeartBeats radio" ForegroundText="light" BackgroundColor="#464646" ToastCapable="false">
+        <m2:DefaultTile ShortName="HeartBeatsplayer" DefaultSize="square150x150Logo">
+          <m2:ShowNameOnTiles>
+            <m2:ShowOn Tile="square150x150Logo" />
+          </m2:ShowNameOnTiles>
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="white" />
+        <m2:InitialRotationPreference>
+          <m2:Rotation Preference="landscape" />
+        </m2:InitialRotationPreference>
+        <m2:ApplicationView MinWidth="width320" />
+      </m2:VisualElements>
+      <Extensions>
+        <Extension Category="windows.backgroundTasks" EntryPoint="HeartBeatsPlayer.App">
+          <BackgroundTasks>
+            <Task Type="audio" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

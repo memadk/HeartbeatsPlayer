@@ -1,0 +1,42 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModels="clr-namespace:HeartBeatsPlayerWP.ViewModels"
+    x:Class="HeartBeatsPlayerWP.MainPage"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True"
+    >
+    <phone:PhoneApplicationPage.DataContext>
+        <ViewModels:MainViewModel/>
+    </phone:PhoneApplicationPage.DataContext>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image Grid.RowSpan="4" Source="Assets/logo150.png" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Margin="10"/>
+        <TextBlock Grid.Row="0" Text="Heartbeats Radio" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource PhoneTextAccentStyle}" FontSize="55" Margin="20"/>
+        <TextBlock Grid.Row="1" Text="Great music presented by Le Gammeltoft." VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource PhoneTextAccentStyle}" FontSize="20"/>
+        <ProgressBar Grid.Row="2" Visibility="{Binding SpinnerVisibility}" x:Name="ProgressBar" IsIndeterminate="True" Margin="10"/>
+        <Image Grid.Row="3"  Tap="UIElement_OnTap" Source="{Binding PlayIconUri}" Height="150" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="4" d:LayoutOverrides="Height">
+            <TextBlock Foreground="Black" x:Name="txtState" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Foreground="Black" x:Name="txtPosition" TextWrapping="Wrap" Width="120"/>
+        </StackPanel>
+        
+    </Grid>
+</phone:PhoneApplicationPage>
+

@@ -1,0 +1,58 @@
+how to use the Control
+
+Windows Store - Code snippet:
+
+		protected override void OnLaunched(LaunchActivatedEventArgs e)
+        {
+			.
+			.
+			.
+			.
+			.
+			.
+            // Ensure the current window is active
+            Window.Current.Activate();
+        
+			RateMyApp.WS.Core.RateMyAppControl control = new RateMyApp.WS.Core.RateMyAppControl();
+            
+			// auto language (english only, more languages to come later)
+            control.Start(false,"8fb5ebf0-3ba8-4d68-9f2a-7154d8c0ac6a_70rq6xpyaxwzy",null);
+
+            // debug = true + 'Debug build' => 
+            // Review will apear after 10 sec. regardless of previous state 
+            // Callback: this metod is called everytime the Control changes "review" state.
+            // Exposure Pattern: in this sample the Rate control will be shown 
+            // the first 6 times that app has been used for more than 10 sec. 
+            // or until the review has been completed. 
+            control.Start(true, "8fb5ebf0-........-yaxwzy", new RateMyApp.Core.Rate.RateControlLanguagePack
+            {
+                RateMyAppCancelText = "No",
+                RateMyAppFeedbackEmail = "my-app@email.com",
+                RateMyAppHeader = "Header",
+                RateMyAppText = "text body",
+                RateMyAppThridOptionText = "Send feedback by e-mail",
+                RateMyAppYesText = "yes"
+            }, null, new int[] { 1, 2, 3, 4, 5, 6 });
+		}
+
+Windows Phone - Code snippet:
+
+		private void Application_Launching(object sender, LaunchingEventArgs e)
+        {
+            RateMyApp.WP.Core.RateMyAppControl control = new RateMyApp.WP.Core.RateMyAppControl();
+
+            // debug = true + 'Debug build' => 
+            // Review will apear after 10 sec. regardless of previous state 
+            // Callback: this metod is called everytime the Control changes "review" state.
+            // Exposure Pattern: in this sample the Rate control will be shown 
+            // the first 6 times that app has been used for more than 10 sec. 
+            // or until the review has been completed. 
+            control.Start(true, new RateMyApp.Core.Rate.RateControlLanguagePack { 
+                RateMyAppCancelText="No",
+                RateMyAppFeedbackEmail = "not implemented on WP yet",
+                RateMyAppHeader="Header",
+                RateMyAppText="text body",
+                RateMyAppThridOptionText = "not implemented on WP yet",
+                RateMyAppYesText="yes"
+            },null, new int[]{1,2,3,4,5,6});
+        }
