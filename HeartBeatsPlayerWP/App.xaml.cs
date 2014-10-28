@@ -25,7 +25,7 @@ namespace HeartBeatsPlayerWP
         /// <summary>
         /// Component used to remind end users about the trial state of the application.
         /// </summary>
-        public RadTrialApplicationReminder trialReminder;
+        //public RadTrialApplicationReminder trialReminder;
 
         /// <summary>
         /// Component used to raise a notification to the end users to rate the application on the marketplace.
@@ -81,23 +81,23 @@ namespace HeartBeatsPlayerWP
 
             //Initializes this instance.
             diagnostics.Init();
-            //Creates an instance of the RadTrialApplicationReminder component.
-            trialReminder = new RadTrialApplicationReminder();
+            ////Creates an instance of the RadTrialApplicationReminder component.
+            //trialReminder = new RadTrialApplicationReminder();
 
-            //Sets the lenght of the trial period.
-            trialReminder.AllowedTrialUsageCount = 30;
+            ////Sets the lenght of the trial period.
+            //trialReminder.AllowedTrialUsageCount = 30;
 
-            //Sets how often the trial reminder is displayed.
-            trialReminder.OccurrenceUsageCount = 2;
+            ////Sets how often the trial reminder is displayed.
+            //trialReminder.OccurrenceUsageCount = 2;
 
-            //The reminder is shown only if the application is in trial mode. When this property is set to true the application will simulate that it is in trial mode.
-            trialReminder.SimulateTrialForTests = true;
+            ////The reminder is shown only if the application is in trial mode. When this property is set to true the application will simulate that it is in trial mode.
+            //trialReminder.SimulateTrialForTests = true;
         
               //Creates a new instance of the RadRateApplicationReminder component.
             rateReminder = new RadRateApplicationReminder();
 
             //Sets how often the rate reminder is displayed.
-            rateReminder.RecurrencePerUsageCount = 2;
+            rateReminder.RecurrencePerUsageCount = 5;
     
         }
 

@@ -5389,6 +5389,11 @@
             If items are more than five, they are displayed in a separate popup RadWindow.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.RadListPicker.ShouldHandleApplicationBarProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadListPicker.ShouldHandleApplicationBar"/> dependency property.
+            </summary>
+        </member>
         <member name="F:Telerik.Windows.Controls.RadListPicker.PopupStyleProperty">
             <summary>
             Defines the <see cref="P:Telerik.Windows.Controls.RadListPicker.PopupStyle"/> property.
@@ -5675,6 +5680,12 @@
         <member name="E:Telerik.Windows.Controls.RadListPicker.ActionButtonTap">
             <summary>
             Occurs when the ActionButton is tapped.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadListPicker.ShouldHandleApplicationBar">
+            <summary>
+            Gets or sets a value used to determine if RadWindow will insert a custom application bar when shown and
+            restore the previous app bar when closed.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.RadListPicker.PopupStyle">

@@ -2591,6 +2591,17 @@
             by animating it.</param>
             <param name="updateRefreshLabel">Indicates whether the refresh label is updated.</param>
         </member>
+        <member name="M:Telerik.Windows.Controls.RadDataBoundListBox.StopPullToRefreshLoading(System.Boolean,System.Boolean,System.Nullable{System.DateTime})">
+            <summary>
+            Stops the loading indicator in the pull-to-refresh element and hides the element by updating
+            the last refresh time if required. By default the DateTime.Now value is used but supplying a different value
+            is possible via the customRefreshDate attribute.
+            </summary>
+            <param name="animate">Indicates whether the pull to refresh indicator will be hidden
+            by animating it.</param>
+            <param name="updateRefreshLabel">Indicates whether the refresh label is updated.</param>
+            <param name="customRefreshDate">Indicates the time at which the loading has been stopped.</param>
+        </member>
         <member name="M:Telerik.Windows.Controls.RadDataBoundListBox.StopPullToRefreshLoading(System.Boolean)">
             <summary>
             Stops the loading indicator in the pull-to-refresh element and hides the element by updating
@@ -3779,6 +3790,11 @@
             Identifies the Title dependency property.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.HubTileBase.TitleTemplateProperty">
+            <summary>
+            Identifies the TitleTemplate dependency property.
+            </summary>
+        </member>
         <member name="F:Telerik.Windows.Controls.HubTileBase.UpdateIntervalProperty">
             <summary>
             Identifies the UpdateInterval dependency property.
@@ -3922,6 +3938,11 @@
             Gets or sets the Title.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.HubTileBase.TitleTemplate">
+            <summary>
+            Gets or sets the title template.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.HubTileBase.IsFrozen">
             <summary>
             Gets or sets the IsFrozen property. Freezing a hub tile means that it will cease to
@@ -4062,11 +4083,6 @@
             Identifies the Picture dependency property.
             </summary>
         </member>
-        <member name="F:Telerik.Windows.Controls.RadSlideHubTile.TitleTemplateProperty">
-            <summary>
-            Identifies the TitleTemplate dependency property.
-            </summary>
-        </member>
         <member name="M:Telerik.Windows.Controls.RadSlideHubTile.#ctor">
             <summary>
             Initializes a new instance of the RadSlideHubTile class.
@@ -4103,11 +4119,6 @@
         <member name="P:Telerik.Windows.Controls.RadSlideHubTile.Picture">
             <summary>
             Gets or sets the contact picture.
-            </summary>
-        </member>
-        <member name="P:Telerik.Windows.Controls.RadSlideHubTile.TitleTemplate">
-            <summary>
-            Gets or sets the DataTemplate that is used to visualize the Title property.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.RadSlideHubTile.ShouldClip">
@@ -5688,6 +5699,111 @@
         <member name="T:Telerik.Windows.Controls.RadPasswordBox">
             <summary>
             Represents a control that brings additional functionality like watermark, action button and header to the standart PasswordBox.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.ITextBox">
+            <summary>
+            Represents an inferface which contains the common functionality between RadTextBox and RadPasswordBox.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.ITextBox.ChangeValidationState(Telerik.Windows.Controls.PhoneTextBox.ValidationState,System.String)">
+            <summary>
+            Used to change the ValidationState of the control and provide a custom message that will be displayed to clarify the state.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.ITextBox.EvaluateElementsVisibility">
+            <summary>
+            Intended for internal use only.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.ITextBox.SetSecondaryButtonVisibility">
+            <summary>
+            Intended for internal use only.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.ITextBox.GoToState(System.String,System.Boolean)">
+            <summary>
+            Intended for internal use only.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.ITextBox.SetValidationState(Telerik.Windows.Controls.PhoneTextBox.ValidationState)">
+            <summary>
+            Intended for internal use only.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.ITextBox.SetValidationMessage(System.String)">
+            <summary>
+            Intended for internal use only.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.ITextBox.Header">
+            <summary>
+            Gets or sets a string representing the header of the <see cref="T:Telerik.Windows.Controls.ITextBox"/> implementor.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.ITextBox.IsTemplateApplied">
+            <summary>
+            Determines whether the <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/> method has been called for this instance.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.ITextBox.IsFocused">
+            <summary>
+            Determines whether the control is currently Focused (has the keyboard input).
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.ITextBox.HeaderTemplate">
+            <summary>
+            Gets or sets the header template.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.ITextBox.HeaderStyle">
+            <summary>
+            Gets or sets the header style.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.ITextBox.Watermark">
+            <summary>
+            Gets or sets the watermark that will be used when the input box is empty.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.ITextBox.ValidationState">
+            <summary>
+            Gets the current ValidationState of this instance.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.ITextBox.ValidationMessage">
+            <summary>
+            Gets the current ValidationMessage of this instance.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.ITextBox.ActionButtonStyle">
+            <summary>
+            Gets or sets the style for the action button.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.ITextBox.ActionButtonVisibility">
+            <summary>
+            Gets or sets the visibility for the action button.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.ITextBox.ActionButtonCommand">
+            <summary>
+            Gets or sets the command for the action button.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.ITextBox.ExecuteActionOnReturn">
+            <summary>
+            Gets or sets a value indicating whether when the Enter key is pressed the ActionButtonCommand will be executed.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.ITextBox.ActionButtonCommandParameter">
+            <summary>
+            Gets or sets the command parameter for the action button.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.ITextBox.HideWatermarkOnFocus">
+            <summary>
+            Gets or sets a value indicating whether the watermarks will hide on focus, or when the text box is not empty.
             </summary>
         </member>
         <member name="F:Telerik.Windows.Controls.RadPasswordBox.PasswordProperty">
@@ -7575,6 +7691,11 @@
             Fires the <see cref="E:Telerik.Windows.Controls.RadSlideView.SlideAnimationCompleted"/> event.
             </summary>
         </member>
+        <member name="M:Telerik.Windows.Controls.RadSlideView.OnSlideViewStateChanged(Telerik.Windows.Controls.SlideViewState,Telerik.Windows.Controls.SlideViewState)">
+            <summary>
+            Fires the <see cref="E:Telerik.Windows.Controls.RadSlideView.SlideViewStateChanged"/> event.
+            </summary>
+        </member>
         <member name="M:Telerik.Windows.Controls.RadSlideView.CreateManipulationBehavior">
             <summary>
             Creates the core <see cref="T:Telerik.Windows.Controls.SlideView.SlideViewManipulationBehavior"/> depending on the current <see cref="P:Telerik.Windows.Controls.RadSlideView.TransitionMode"/> value.
@@ -7636,11 +7757,6 @@
         <member name="M:Telerik.Windows.Controls.RadSlideView.OnRefreshRequested">
             <summary>
             Fires the <see cref="E:Telerik.Windows.Controls.RadSlideView.RefreshRequested"/> event.
-            </summary>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadSlideView.OnSlideViewStateChanged(Telerik.Windows.Controls.SlideViewState,Telerik.Windows.Controls.SlideViewState)">
-            <summary>
-            Fires the <see cref="E:Telerik.Windows.Controls.RadSlideView.SlideViewStateChanged"/> event.
             </summary>
         </member>
         <member name="E:Telerik.Windows.Controls.RadSlideView.SelectionChanged">
@@ -13245,6 +13361,11 @@
             RadWindow provides users with the ability to show arbitrary content at an arbitrary location on the screen with a convenient high level API.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.RadWindow.ShouldHandleApplicationBarProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadWindow.ShouldHandleApplicationBar"/> dependency property.
+            </summary>
+        </member>
         <member name="F:Telerik.Windows.Controls.RadWindow.ApplicationBarInfoProperty">
             <summary>
             Identifies the ApplicationBarInfo dependency property.
@@ -13410,13 +13531,6 @@
             </summary>
             <returns>Returns a value that indicates if this type allows closing on outside tap.</returns>
         </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.ShouldHandleApplicationBar">
-            <summary>
-            This method is used to determine if RadWindow will insert a custom application bar when shown and
-            restore the previous app bar when closed.
-            </summary>
-            <returns>Returns true if the application bar should be changed and false otherwise.</returns>
-        </member>
         <member name="M:Telerik.Windows.Controls.RadWindow.OnOpenFailed(Telerik.Windows.Controls.WindowOpenFailedReason)">
             <summary>
             A virtual callback that is called when RadWindow fails to open. This method
@@ -13544,6 +13658,12 @@
             Gets or sets the content that will be shown inside RadWindow.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.RadWindow.ShouldHandleApplicationBar">
+            <summary>
+            Gets or sets a value used to determine if RadWindow will insert a custom application bar when shown and
+            restore the previous app bar when closed.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.RadWindow.AppBarOffset">
             <summary>
             Exposed for testing purposes.
@@ -13563,13 +13683,6 @@
             <summary>
             Initializes a new instance of the RadModalWindow class.
             </summary>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadModalWindow.ShouldHandleApplicationBar">
-            <summary>
-            This method is used to determine if RadWindow will insert a custom application bar when shown and
-            restore the previous app bar when closed.
-            </summary>
-            <returns>Returns true if the application bar should be changed and false otherwise.</returns>
         </member>
         <member name="M:Telerik.Windows.Controls.RadModalWindow.AddCanvas(System.Windows.Controls.Panel)">
             <summary>
@@ -13592,6 +13705,12 @@
         <member name="P:Telerik.Windows.Controls.RadModalWindow.ShouldHideSiblings">
             <summary>
             Gets a value that determines whether the window should hide all root elements (Performance optimization).
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadModalWindow.ShouldHandleApplicationBar">
+            <summary>
+            Gets or sets a value used to determine if RadWindow will insert a custom application bar when shown and
+            restore the previous app bar when closed.
             </summary>
         </member>
         <member name="T:Telerik.Windows.Controls.WindowSizeMode">

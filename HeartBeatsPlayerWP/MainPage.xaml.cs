@@ -26,9 +26,6 @@ namespace HeartBeatsPlayerWP
             playStateChangedEventHandler = new EventHandler(Instance_PlayStateChanged);
             this.DataContext = _model;
 
-            //Shows the trial reminder message, according to the settings of the TrialReminder.
-            (App.Current as App).trialReminder.Notify();
-
             //Shows the rate reminder message, according to the settings of the RateReminder.
             (App.Current as App).rateReminder.Notify();
             BackgroundAudioPlayer.Instance.Play();
