@@ -4,7 +4,6 @@
     xmlns:local="using:HeartBeatsPlayer"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:Input="using:Syncfusion.UI.Xaml.Controls.Input"
     x:Class="HeartBeatsPlayer.MainPage"
     mc:Ignorable="d" RequestedTheme="Light" >
 

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StoreAssociation xmlns="http://schemas.microsoft.com/appx/2010/storeassociation">
   <Publisher>CN=26014111-6368-4577-998C-DA47A7035807</Publisher>
-  <NamespacePrefix>mema.dk</NamespacePrefix>
   <PublisherDisplayName>mema.dk v/Mikkel Andreasen</PublisherDisplayName>
   <GeneratePackageHash>http://www.w3.org/2001/04/xmlenc#sha256</GeneratePackageHash>
   <SupportedLocales>
@@ -365,7 +364,7 @@
     <PackageInfo>
       <OsMinVersion>6.3.0.0</OsMinVersion>
       <PackageArchitecture>neutral</PackageArchitecture>
-      <PackageMaxArchitectureVersion>1.1.0.6</PackageMaxArchitectureVersion>
+      <PackageMaxArchitectureVersion>1.1.0.8</PackageMaxArchitectureVersion>
     </PackageInfo>
   </PackageInfoList>
 </StoreAssociation>

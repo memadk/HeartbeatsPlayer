@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="mema.dk.HeartBeatsRadio" Publisher="CN=26014111-6368-4577-998C-DA47A7035807" Version="1.1.0.8" />
+  <Identity Name="mema.dk.HeartBeatsRadio" Publisher="CN=26014111-6368-4577-998C-DA47A7035807" Version="1.1.0.10" />
   <Properties>
     <DisplayName>HeartBeats Radio</DisplayName>
     <PublisherDisplayName>mema.dk v/Mikkel Andreasen</PublisherDisplayName>

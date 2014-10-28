@@ -146,11 +146,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <SDKReference Include="Syncfusion controls for WinRT XAML, Version=11.3.0.32">
-      <Name>Syncfusion controls for WinRT XAML</Name>
-    </SDKReference>
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="RateMyApp.Core">
       <HintPath>..\packages\RateMyAppControl.1.0.7\lib\netcore451\RateMyApp.Core.dll</HintPath>
     </Reference>

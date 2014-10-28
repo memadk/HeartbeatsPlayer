@@ -1,7 +1,5 @@
 ﻿using System;
-using Windows.Foundation;
 using Windows.Media;
-using Windows.Media.PlayTo;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
